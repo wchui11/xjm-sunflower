@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>太阳花互动程序</title>
+  <style>
+    /* 页面整体样式 */
+    body {
+      background-color: #fff0f5; /* 粉色背景，可自行修改 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: "微软雅黑", sans-serif;
+    }
+    /* 问题文本样式 */
+    .question {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    /* 按钮初始样式 */
+    .btn {
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.5s ease; /* 动画过渡效果 */
+    }
+    /* 按钮 hover 效果（可选） */
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="question">许佳敏，你是一朵太阳花。</div>
+  <button class="btn" id="yesBtn">是的</button>
+
+  <script>
+    // 获取按钮元素
+    const yesBtn = document.getElementById('yesBtn');
+    // 初始字体大小
+    let fontSize = 18;
+
+    // 点击按钮的事件监听
+    yesBtn.addEventListener('click', function() {
+      // 字体大小每次增加 2px
+      fontSize += 2;
+      // 设置新的字体大小
+      yesBtn.style.fontSize = fontSize + 'px';
+    });
+  </script>
+</body>
+</html>
